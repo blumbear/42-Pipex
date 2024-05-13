@@ -1,5 +1,4 @@
-NAME = push_swap
-NAME_BONUS = checker
+NAME = pipex
 
 LIBAMOA = libamoa/libamoa.a
 
@@ -11,9 +10,8 @@ CFLAGS =	-Wall -Wextra -Werror -g \
 LFLAGS =	-Llibamoa \
 			-lamoa
 
-FILES = algo fill_stack instruction main print_and_error research_fonction \
-rules set utils
-FILES_BONUS = checker
+FILES = main
+FILES_BONUS = 
 
 OBJ_DIR = obj/
 SRC_DIR = src/
