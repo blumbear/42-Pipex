@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ttaquet <ttaquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/13 15:35:04 by ttaquet           #+#    #+#             */
-/*   Updated: 2024/05/13 16:27:13 by ttaquet          ###   ########.fr       */
+/*   Created: 2024/05/13 15:57:51 by ttaquet           #+#    #+#             */
+/*   Updated: 2024/05/13 15:59:22 by ttaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	main(int ac, char **av, char **envp)
+void	ft_error(char *error)
 {
-	int	infile_fd;
-	int	outfile_fd;
-
-	if (ac < 5)
-		ft_error("Usage : ./pipex file1 cmd1 cmd2 file2");
-	infile_fd = open(av[1], O_RDONLY);
-	if (infile_fd == -1)
-		ft_error("No such file or directory");
+	if (error && ft_strncmp(error, "Usage :", 7) == 0)
+		ft_printf("%s\n", error);
+	else if (error)
+		ft_printf("Error : %s\n", error);
+	exit(0);
 }

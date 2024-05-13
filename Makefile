@@ -10,7 +10,7 @@ CFLAGS =	-Wall -Wextra -Werror -g \
 LFLAGS =	-Llibamoa \
 			-lamoa
 
-FILES = main
+FILES = main error
 FILES_BONUS = 
 
 OBJ_DIR = obj/
